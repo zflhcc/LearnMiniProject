@@ -1,3 +1,6 @@
 <!--pages/home/home.wxml-->
 <text>pages/home/home.wxml</text>
 <button>测试</button>
+
+<view>测试测试测试测试测试测试</view>
+<view> 测试测试测试测试测试测试</view>
