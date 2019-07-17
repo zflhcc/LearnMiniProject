@@ -1,1 +1,5 @@
 /* pages/home/home.wxss */
+
+view{
+  margin-bottom: 12px;
+}
