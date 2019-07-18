@@ -1,3 +1,16 @@
 <!--pages/home/home.wxml-->
 <text>pages/home/home.wxml</text>
 <button>测试</button>
+
+<!--点击获取用户信息-->
+<button 
+  open-type='getUserInfo'
+  bindgetuserinfo='handleGetUserInfo'
+>获取授权</button>
+
+
+<!--直接展示用户信息-->
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>
+
+<view wx:for='{{list}}'>{{item.title}}</view>
