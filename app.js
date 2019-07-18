@@ -1,6 +1,9 @@
 //app.js
 App({
+   //小程序初始化完成，会执行的生命周期函数
   onLaunch: function () {
+
+    console.log('初始化完成: onLaunch');
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -21,6 +24,7 @@ App({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
+              console.log(res)
 
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
               // 所以此处加入 callback 以防止这种情况
@@ -33,6 +37,22 @@ App({
       }
     })
   },
+
+  //小程序界面显示完成后执行的生命周期函数
+  onShow: function(){
+    console.log('界面显示: onshow');
+  },
+
+  //小程序关闭，会执行的生命周期函数
+  onHide: function(){
+    console.log('关闭小程序: onHide');
+  },
+
+  //小程序发生错误，会执行的生命周期函数
+  onError: function(){
+    console.log('发生错误: onError');
+  },
+
   globalData: {
     userInfo: null
   }
