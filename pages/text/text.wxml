@@ -1,0 +1,20 @@
+<!--pages/text/text.wxml-->
+<!--基本使用-->
+<text>text\n</text>
+<text>你好小程序\n\n</text>
+
+
+<!--selectable使用 文本长按选中-->
+<text selectable='{{true}}'>你好小程序\n</text>
+<text selectable>你好小程序\n\n</text>
+
+<!--space使用  文本空格-->
+<text>hello world\n</text>
+<text space='nbsp'>hello world\n</text>
+<text space='ensp'>hello world\n</text>
+<text space='emsp'>hello world\n\n</text>
+
+<!--decode使用  是否解码 --->
+
+<text decode>5 &gt; 3</text>
+

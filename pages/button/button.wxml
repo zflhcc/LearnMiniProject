@@ -1,0 +1,23 @@
+<!--pages/button/button.wxml-->
+
+<!--1.button  基本使用-->
+
+<button>按钮</button>
+
+<!--2.button  size：mini 属性-->
+<button size='mini'>按钮</button>
+<button size='mini'>按钮</button>
+
+<!--3.button  type 属性-->
+<button type='primary'>按钮</button>
+<button type='default'>按钮</button>
+<button type='warn'>按钮</button>
+
+<!--4.button  plain 属性-->
+<button plain='{{true}}'>按钮</button>
+
+<!--5.button  loading 属性-->
+<button loading='{{isLoading}}'>按钮</button>
+
+<!--6.button  hover-class 属性-->
+<button hover-class='hoverCls'>按钮</button>

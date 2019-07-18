@@ -1,0 +1,14 @@
+
+<scroll-view class="section" scroll-x>
+  <view  class="item" wx:for='{{10}}'>{{item}}</view>
+</scroll-view>
+
+
+<scroll-view class="section2" scroll-y>
+  <view  class="item" wx:for='{{10}}'>{{item}}</view>
+</scroll-view>
+
+<!--3.其他事件-->
+<scroll-view class="section2" scroll-y bindscroll='handleScroll'>
+  <view  class="item" wx:for='{{10}}'>{{item}}</view>
+</scroll-view>

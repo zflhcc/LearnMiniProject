@@ -1,0 +1,19 @@
+
+.section{
+  background:red;
+  white-space: nowrap;
+  margin-bottom: 15px;
+}
+.item{
+  width:100px;
+  height:100px;
+  background:orange;
+  margin:10px;
+  display: inline-block;
+}
+
+.section2{
+  background:violet;
+  height:200px;
+   margin-bottom: 15px;
+}

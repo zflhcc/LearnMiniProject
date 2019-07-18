@@ -1,0 +1,28 @@
+<!--1.image 基本使用-->
+<!--重点
+    1.行内块级元素
+-->
+<image src="/assets/1.jpg"></image>
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"/>
+
+
+<!--2.image 相册中选中图片-->
+<button bindtap='handleImage'>选中图片</button>
+<image src="{{imagesPath}}"/>
+
+<!--2.image 
+  bindload 监听图片加载
+  lazy-load 懒加载
+-->
+<view>--------------------------------------</view>
+<image wx:for="{{1}}"
+        bindload="handleImageLoad" 
+        lazy-load
+        src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"/>
+
+<!--- 3.image 
+show-menu-by-longpress  长按图片出现程序
+--->
+<image 
+  show-menu-by-longpress
+  src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"/>

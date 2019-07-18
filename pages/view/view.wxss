@@ -1,0 +1,26 @@
+/* pages/view/view.wxss */
+.red-bg{
+  background:red
+}
+view{
+  margin-bottom:12px;
+}
+
+.box{
+  width:100px;
+  height:100px;
+  background:cornflowerblue;
+}
+.box-hover{
+  background:blue;
+  color:#fff;
+}
+.box2{
+  background:cadetblue;
+  width:200px;
+  height:200px;
+}
+.box-hover2{
+  background:palevioletred;
+  color:#fff;
+}

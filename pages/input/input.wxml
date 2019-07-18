@@ -1,0 +1,17 @@
+<!--pages/input/input.wxml-->
+<input value="1222" />
+
+<input value="1222" type='number' />
+
+<input value="1222" password/>
+
+<input placeholder="请输入......"/>
+
+
+<!--事件绑定-->
+<input 
+  placeholder="请输入......" 
+  bindinput='handleInput'
+  bindfocus='handleFocus'
+  bindblur='handleBlur'
+/>
