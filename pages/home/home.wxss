@@ -1,1 +1,12 @@
 /* pages/home/home.wxss */
+.box{
+  font-size: 20px;
+  color:red;
+}
+.active{
+  color:blue
+}
+
+view{
+  margin:5px 0;
+}

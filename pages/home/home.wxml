@@ -1,3 +1,47 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
-<button>测试</button>
+<view>{{message}}</view>
+<view>{{firstname}} {{lastname}}</view>
+<view>{{firstname + ' ' + lastname}}</view>
+<view>{{age > 18 ? '成年人' : '未成年人'}}</view>
+<view>{{nowTime}}</view>
+
+<view>-------------切换颜色----------------</view>
+<button size="mini" bindtap='handleColor'>切换颜色</button>
+<view class='box {{isActive ? "active" : ""}}'>哈哈哈哈</view>
+
+
+<!--wx:if-->
+<view>-------------切换显示----------------</view>
+<button size="mini" bindtap='handleShow'>切换显示</button>
+<view wx:if="{{ isShow }}">哈哈哈哈</view>
+
+
+<!--wx:if wx:elif-->
+<view>-------------切换显示----------------</view>
+<button size="mini" bindtap='handleAdd'>分数递增6分</button>
+<view wx:if="{{ scrore >= 90 }}">优秀</view>
+<view wx:elif="{{ scrore >= 80 }}">良好</view>
+<view wx:elif="{{ scrore >= 60 }}">及格</view>
+<view wx:else="{{ scrore < 60 }}">不及格</view>
+
+<!--hidden-->
+<view hidden="{{ false }}">我是通过hidden隐藏的内容</view>
+
+<view>-------------列表渲染  wx:for ----------------</view>
+<view wx:for="{{['aaa','bbb', 'cccc']}}" wx:key="{{item}}">{{item}} {{index}}</view>
+
+<view>-------------block  标签 ----------------</view>
+<block wx:for="{{2}}" wx:key="{{item}}">
+  <view>大师傅</view>
+  <button size='mini'>btn</button>
+</block>
+
+<view>----------给 item  index  起名字--------</view>
+<view wx:for="{{moives}}" wx:for-item="moives" wx:for-index="i" wx:key="{{item}}">{{moives}} {{i}}</view>
+
+<view>-----什么时候给 item  index 起名字------</view>
+<block wx:for="{{moiveNum}}" wx:for-item="inner_moiveNum" wx:key="{{inner_moiveNum}}">
+  <block wx:for="{{inner_moiveNum}}" wx:key="{{item}}">
+    <view>{{item}}</view>
+  </block>
+</block>
