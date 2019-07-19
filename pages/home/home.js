@@ -1,47 +1,27 @@
-
-// pages/home/home.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-    list:[]
+    inputShowed: false,
+    inputVal: ""
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-    console.log('onLoad')
+  showInput: function () {
+    this.setData({
+      inputShowed: true
+    });
   },
-
-  /**
-  * 生命周期函数--监听页面显示
-  */
-  onShow() {
-    console.log('onShow')
+  hideInput: function () {
+    this.setData({
+      inputVal: "",
+      inputShowed: false
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-    console.log('onReady')
+  clearInput: function () {
+    this.setData({
+      inputVal: ""
+    });
   },
-
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-    console.log('onHide')
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-    console.log('onUnload')
+  inputTyping: function (e) {
+    this.setData({
+      inputVal: e.detail.value
+    });
   }
-})
+});
