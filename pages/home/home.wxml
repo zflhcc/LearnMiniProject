@@ -1,3 +1,25 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
-<button>测试</button>
+<!--1.直接在wxml 里面写wxs-->
+<!-- <wxs module='info'>
+  var message = 'hello world';
+  var name = 'Tom';
+  var sun = function(num1,num2){
+     return num1 + num2
+  }
+
+  module.exports = {
+    message:message,
+    name:name,
+    sun:sun
+  }
+
+</wxs> -->
+
+<!--2.单独定义wxs文件  再用wxs导入方法引用wxs-->
+<wxs src="../../wxs/info.wxs" module="info"></wxs>
+<view>{{info.message}}</view>
+<view>{{info.name}}</view>
+<view>{{info.sun(1,2)}}</view>
+
+<view>-----wxs 应用-----</view>
+<wxs src="../../wxs/format.wxs" module="format"></wxs>
+<view>{{format.priceFormat(price)}}</view>

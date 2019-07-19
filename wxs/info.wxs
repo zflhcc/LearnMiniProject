@@ -1,0 +1,11 @@
+var message = 'hello world';
+var name = 'Tom';
+var sun = function (num1, num2) {
+  return num1 + num2
+}
+
+module.exports = {
+  message: message,
+  name: name,
+  sun: sun
+}
