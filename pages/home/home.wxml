@@ -1,3 +1,32 @@
 <!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
-<button>测试</button>
+
+<view class='box'
+    bind:touchstart="handleTouchStart"
+    bind:touchmove="handleTouchMove"
+    bind:touchend="handleTouchEnd"
+    bind:longpress="handleLongPress"
+    bind:tap="handleTap"
+>常见事件类型</view>
+
+<button id='btn' size='mini' bindtap='handleEventClick'>事件对象</button>
+
+<view class='outer' bindtap='handleOuter'>
+   外层view
+   <view class="inner" bindtap='handleInner'>内层view</view>
+</view>
+
+<!--参数传递-->
+<view class='title'>
+  <block wx:for="{{title}}" wx:key="{{index}}">
+    <view class='item {{ currentIndex === index ? "active" : " "}}' bind:tap="handleItem" data-index="{{index}}" data-title="{{title}}">
+      {{item}}
+    </view>
+  </block>
+</view>
+
+
+<view class='view1' capture-bind:tap='handleCaptureView1' bindtap="handleBindView1">
+  <view class='view2'  capture-bind:tap='handleCaptureView2' bindtap="handleBindView2">
+    <view class='view3'  capture-bind:tap='handleCaptureView3' bindtap="handleBindView3"></view>
+  </view>
+</view>
