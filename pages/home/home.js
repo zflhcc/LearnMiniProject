@@ -2,46 +2,80 @@
 // pages/home/home.js
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-    list:[]
+  handleToast(){
+    wx.showToast({
+      title: '加载中ing',
+      duration: 3000,
+      icon: 'loading',
+      image:'',
+      mask: true,
+
+      success: ()=> {
+        console.log('成功')
+      },
+      fail: ()=> {
+        console.log('失败')
+      },
+      complete: ()=> {
+        console.log('完成')
+      }
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-    console.log('onLoad')
+  handleModel(){
+    wx.showModal({
+      title: '小程序',
+      content: '小程序内容',
+      // showCannel: false,
+      cancelText: '退出',
+      cancelColor: '#ff0000',
+      success: (res) => {
+        console.log(res)
+        if (res.cancel){
+          console.log('用户点击了取消')
+        }
+        if (res.confirm) {
+          console.log('用户点击了确定')
+        }
+      }
+    })
   },
 
-  /**
-  * 生命周期函数--监听页面显示
-  */
-  onShow() {
-    console.log('onShow')
+  handleLoading(){
+    wx.showLoading({
+      title: '加载中',
+      mask: true,
+
+      success: () => {
+        console.log('成功')
+      },
+      fail: () => {
+        console.log('失败')
+      },
+      complete: () => {
+        console.log('完成')
+      }
+    })
+
+    setTimeout(() => {
+      wx.hideLoading()
+    }, 2000)
+
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-    console.log('onReady')
-  },
-
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-    console.log('onHide')
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-    console.log('onUnload')
+  handleActionSheet(){
+    wx.showActionSheet({
+      itemList: ['相册', '拍照'],
+      success(res) {
+        console.log(res.tapIndex)
+      },
+      fail(res) {
+        console.log(res.errMsg)
+      }
+    })
   }
+
+  
+
+ 
 })

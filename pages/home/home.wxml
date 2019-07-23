@@ -1,3 +1,20 @@
 <!--pages/home/home.wxml-->
 <text>pages/home/home.wxml</text>
-<button>测试</button>
+<button size='mini' >测试</button>
+
+<!--1.Toast-->
+
+<button size='mini' bind:tap="handleToast">showToast</button>
+
+<!--2.Model-->
+
+<button size='mini' bind:tap="handleModel">showModel</button>
+
+
+<!--3.Loading-->
+
+<button size='mini' bind:tap="handleLoading">showLoading</button>
+
+<!--4.ActionSheet-->
+
+<button size='mini' bind:tap="handleActionSheet">showActionSheet</button>
