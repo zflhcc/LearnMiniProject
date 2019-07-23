@@ -1,3 +1,6 @@
 <!--pages/home/home.wxml-->
 <text>pages/home/home.wxml</text>
-<button>测试</button>
+<button size='mini'>测试</button>
+
+<!--分享按钮-->
+<button size='mini' open-type='share'>分享按钮</button>
