@@ -1,3 +1,48 @@
 <!--pages/home/home.wxml-->
 <text>pages/home/home.wxml</text>
-<button>测试</button>
+<view class="title">测试</view>
+
+<!--组件之间数据传递和样式细节-->
+<my-prop title="哈哈哈" titleclass="red"></my-prop>
+<my-prop title="呵呵呵呵" titleclass="green"></my-prop>
+<my-prop titleclass="blue"></my-prop>
+
+<view>  </view>
+
+<!--组件自定义事件传递数据-->
+<view>{{count}}</view>
+<my-event bind:myevent="handleIncrement" />
+
+<!--tab-control-->
+<w-tab tab="{{['流行','新款','精选']}}" bind:tabclick="handleTabClick"/>
+
+<!--直接选中组件中数据和调用方法-->
+<button size="mini" bind:tap="handleSel">修改组件内的数据</button>
+<my-sel class="sel-class" id="sel-id" />
+
+<!--插槽-->
+<!--单个插槽-->
+<my-slot>
+  <button size="mini">我是插槽按钮</button>
+</my-slot>
+<view> ------- </view>
+
+<my-slot>
+  <text>哈哈</text>
+</my-slot>
+<view> ------- </view>
+
+<my-slot>
+  <image mode='widthFix' src="../../assets/tabBar/nav_business.png"></image>
+</my-slot>
+
+<!--多个插槽-->
+<!--
+注意事项
+1.插槽需要有名字  name属性
+2.需要在component  增加options: { multipleSlots: true}
+-->
+<my-mslot>
+  <button size="mini" multipleSlots slot="slot2">我是多个插槽</button>
+  <slider slot="slot1"></slider>
+</my-mslot>

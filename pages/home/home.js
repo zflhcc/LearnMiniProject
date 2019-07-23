@@ -6,42 +6,32 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list:[]
+    count:0
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-    console.log('onLoad')
+  handleIncrement(){
+    this.setData({
+      count:this.data.count + 1
+    })
   },
 
-  /**
-  * 生命周期函数--监听页面显示
-  */
-  onShow() {
-    console.log('onShow')
+  handleTabClick(event){
+    console.log(event);
   },
+  handleSel(){
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-    console.log('onReady')
-  },
+    //获取组件对象 selectxComponent
+    const my_sel = this.selectComponent('#sel-id');
+
+    //1.通过setData 来修改组件数据
+    // my_sel.setData({
+    //   count: my_sel.data.count + 1
+    // })
+
+    //2.通过方法对数据进行修改
+    my_sel.incrementCount(1)
 
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-    console.log('onHide')
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-    console.log('onUnload')
   }
+
 })

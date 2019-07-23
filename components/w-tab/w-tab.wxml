@@ -1,0 +1,10 @@
+<!--components/w-tab/w-tab.wxml-->
+<view class='tab'>
+<block wx:for="{{tab}}" wx:key="{{index}}">
+  <view class='tab-item {{curIndex===index ? "active" : " " }}'
+  bind:tap="handleCruIndex" data-index="{{index}}">
+    <text>{{item}}</text>
+  </view>
+</block>
+ 
+</view>
