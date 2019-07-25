@@ -1,0 +1,8 @@
+<!--pages/detail/edtail.wxml-->
+<text>pages/detail/edtail.wxml</text>
+
+<navigator url='/pages/comment/comment'>评论详情</navigator>
+
+<navigator open-type='navigateBack'>返回</navigator>
+
+<button size='mini' bind:tap="handleBack">返回详情</button>

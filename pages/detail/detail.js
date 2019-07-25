@@ -1,17 +1,10 @@
-// pages/home/home.js
+// pages/detail/edtail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      title: '哈哈哈'
-  },
-
-  handleTo(){
-   wx.navigateTo({
-     url: '/pages/detail/detail?name=why&age=18&height=1.8',
-   })
 
   },
 
@@ -19,7 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options)
   },
 
   /**
@@ -47,7 +40,19 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
+      console.log('页面退出')
+      //1.获取首页的y页面对象
+      const pages = getCurrentPages()
+    const hpage = pages[pages.length - 2]
+    hpage.setData({
+        title:'呵呵呵'
+      })
+  },
 
+  handleBack(){
+    wx.navigateBack({
+      delta: 1
+    })
   },
 
   /**
